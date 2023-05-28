@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lunch_selection">
+        <item>Chinese Foods</item>
+        <item>European Foods</item>
+        <item>Italian Foods</item>
+        <item>Mexican Foods</item>
+        <item>Thai Cuisine</item>
+        <item>Burmese Cuisine</item>
+    </string-array>
+    
+    <string-array name="additional_drinks">
+        <item>Water</item>
+        <item>Red Wine</item>
+        <item>Green Tea</item>
+        <item>Black Coffee</item>
+        <item>Almond Milk</item>
+    </string-array>
+</resources>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="greeting">Hello Views</string>
+    <string name="zenitsu">thunder breathing first form</string>
+    <string name="hint">Pls, type your name.</string>
+    <string name="btn_greeting_content">Say Hello</string>
+    <string name="apple_cb">Apple</string>
+    <string name="orange_cb">Orange</string>
+    <string name="berry_cb">Berry</string>
+    <string name="check_fruit">Check Fruit</string>
+    <string name="fruit_alert_dialog_title">Selected Fruits</string>
+    <string name="rb_female">Female</string>
+    <string name="rb_male">Male</string>
+    <string name="lbl_on">ON</string>
+    <string name="lbl_off">OFF</string>
+    <string name="door_lock_lbl">Door Lock</string>
+    <string name="type_drinks">Type drinks</string>
+    <string name="btn_select_date">Select Date</string>
+    <string name="selected_date">Your selected date:</string>
+    <string name="selected_time">Your selected time</string>
+    <string name="btn_select_time">Select Time</string>
+    <string name="btn_one">One</string>
+    <string name="btn_two">Two</string>
+    <string name="btn_three">Three</string>
+    <string name="linear_one">Linear One</string>
+    <string name="linear_two">Linear Two</string>
+    <string name="linear_three">Linear Three</string>
+    <string name="profile_image">ProfileImage</string>
+    <string name="zack_leones">Zack Leones</string>
+    <string name="junior_android_developer">Junior Android Developer</string>
+    <string name="company">Droid App Com</string>
+    <string name="case_coding">Types of Case for Coding</string>
+    <string name="your_ride">Your Ride</string>
+    <string name="your_ride_is">Your ride is</string>
+    <string name="taxi_fare">$5.58</string>
+    <string name="t_date">December 17, 2022 at 3:00 p.m.</string>
+    <string name="rate_driver">Rate your driver</string>
+    <string name="your_message">Your message...</string>
+    <string name="done">Done</string>
+
+</resources>

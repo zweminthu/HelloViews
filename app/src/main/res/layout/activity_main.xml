@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?> <!--prolog-->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<!--root element-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+<!--    if no child element don't need to use closing tag, juz use /> -->
+
+    <TextView
+        android:id="@+id/tvHW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/greeting"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:contentDescription="@string/zenitsu"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/zenitsu"
+        tools:layout_editor_absoluteX="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvHW"/>
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:hint="@string/hint"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+    <Button
+        android:id="@+id/btnHello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/editName"
+        android:textAllCaps="false"
+        android:text="@string/btn_greeting_content"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxApple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnHello"
+        android:text="@string/apple_cb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHello"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/checkBoxApple"
+        android:text="@string/orange_cb"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxApple"
+        app:layout_constraintTop_toBottomOf="@+id/btnHello"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxBerry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/checkBoxOrange"
+        android:text="@string/berry_cb"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxOrange"
+        app:layout_constraintTop_toBottomOf="@+id/btnHello"/>
+
+    <Button
+        android:id="@+id/btnCheckFruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxBerry"
+        app:layout_constraintTop_toBottomOf="@+id/btnHello"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="@string/check_fruit"/>
+
+    <RadioButton
+        android:id="@+id/radioButtonMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rb_male"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckFruit"/>
+
+    <RadioButton
+        android:id="@+id/radioButtonFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rb_female"
+        app:layout_constraintStart_toEndOf="@+id/radioButtonMale"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckFruit"/>
+
+    <ToggleButton
+        android:id="@+id/tb_guest_room_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textOff="@string/lbl_off"
+        android:textOn="@string/lbl_on"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonMale" />
+
+    <Switch
+        android:id="@+id/swt_door_lock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:switchMinWidth="56dp"
+        android:text="@string/door_lock_lbl"
+        app:layout_constraintStart_toEndOf="@+id/tb_guest_room_light"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonMale"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <SeekBar
+        android:id="@+id/sb_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:max="500"
+        android:progress="50"
+        app:layout_constraintTop_toBottomOf="@+id/swt_door_lock"
+        tools:layout_editor_absoluteX="-16dp"
+        android:layout_marginTop="16dp"/>
+
+    <RatingBar
+        android:id="@+id/rbRatingStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:numStars="5"
+        android:rating="3.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sb_volume" />
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:max="100"
+        android:minWidth="8dp"
+        android:minHeight="8dp"
+        android:progress="25"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbRatingStar" />
+
+    <Spinner
+        android:id="@+id/spDropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbLoading"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/lunch_selection"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/acDrinks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/spDropDown"
+        android:layout_margin="20dp"
+        android:hint="@string/type_drinks"/>
+
+    <DatePicker
+        android:id="@+id/dp_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:datePickerMode="spinner"
+        app:layout_constraintTop_toBottomOf="@+id/acDrinks" />
+
+    <Button
+        android:id="@+id/btn_select_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_select_date"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/dp_date"/>
+
+    <TextView
+        android:id="@+id/tv_selected_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selected_date"
+        app:layout_constraintTop_toBottomOf="@+id/btn_select_date"
+        android:layout_margin="8dp"/>
+
+    <TimePicker
+        android:id="@+id/tp_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:timePickerMode="clock"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selected_date"/>
+    <Button
+        android:id="@+id/btn_select_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_select_time"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tp_time"/>
+
+    <TextView
+        android:id="@+id/tv_selected_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selected_time"
+        app:layout_constraintTop_toBottomOf="@+id/btn_select_time"
+        android:layout_margin="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

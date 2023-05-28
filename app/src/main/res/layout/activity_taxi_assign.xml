@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".TaxiActivityAssign">
+
+    <TextView
+        android:id="@+id/your_ride"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_ride"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="36sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="40dp"/>
+
+    <TextView
+        android:id="@+id/your_ride_is"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_ride_is"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/your_ride"/>
+    
+    <TextView
+        android:id="@+id/tf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/taxi_fare"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="50sp"
+        app:layout_constraintTop_toBottomOf="@+id/your_ride_is"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/t_date"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tf" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/tProfile"
+        android:layout_width="@dimen/starting_surface_default_icon_size"
+        android:layout_height="@dimen/starting_surface_default_icon_size"
+        android:layout_marginTop="76dp"
+        android:contentDescription="@string/profile_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/opm_snaps"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="@dimen/tooltip_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tf" />
+
+    <TextView
+        android:id="@+id/tname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/zack_leones"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tProfile" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rate_driver"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tname"/>
+
+    <RatingBar
+        android:id="@+id/rbRatingStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:minHeight="40dp"
+        android:numStars="5"
+        android:rating="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rate" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="340dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/et_style"
+        android:hint="@string/your_message"
+        android:padding="@dimen/text_handle_min_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbRatingStar"
+        android:autofillHints="@string/your_message"
+        android:inputType="textMultiLine" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDone"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dip"
+        android:background="@drawable/rounded_corner"
+        android:padding="16dp"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
